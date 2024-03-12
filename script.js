@@ -10,6 +10,7 @@ price=event.target.parentNode.childNodes[3].childNodes[1].innerText;
 // console.log(price);
 catagory=event.target.parentNode.childNodes[5].childNodes[1].innerText
     // console.log(catagory) 
+    // ---------------------------
 const newDiv=document.createElement('div') ;
 newDiv.classList.add("grid")
 newDiv.classList.add("grid-cols-3")
@@ -31,7 +32,37 @@ p1.innerText=name;
 p2.innerText=price;
 p3.innerText=catagory;
     
+// -----------------------------
+const totalAmount=document.getElementById('total-amount');
+   const getTotalAmount=parseInt(totalAmount.innerText)+ parseInt(price);
+// console.log(getTotalAmount);
+totalAmount.innerText=getTotalAmount;
 
+
+const grandtotalAmount=document.getElementById('grand-total');
+ grandtotalAmount.innerText=getTotalAmount;
+// -----------------------------------------------
+
+
+const budgetLimitation=document.getElementById('budget');
+const convertBudget=parseInt (budgetLimitation.innerText);
+// console.log(typeof convertBudget)
+const convertPrice=parseInt(price);
+// console.log(typeof convertPrice)
+const budget=convertBudget-convertPrice;
+// console.log(budget)
+budgetLimitation.innerText=budget;
+
+
+// -------------------------------
+
+const cartLimitation=document.getElementById('cart');
+const cart=parseInt(cartLimitation.innerText)+1;
+cartLimitation.innerText=cart;
+
+
+const leftLimitation=document.getElementById('left');
+leftLimitation.innerText=parseInt(leftLimitation.innerText)-1
 
     })
 }
