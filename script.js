@@ -53,16 +53,24 @@ const budget=convertBudget-convertPrice;
 // console.log(budget)
 budgetLimitation.innerText=budget;
 
-
-// -------------------------------
-
 const cartLimitation=document.getElementById('cart');
 const cart=parseInt(cartLimitation.innerText)+1;
-cartLimitation.innerText=cart;
+const cartValue= cartLimitation.innerText=cart;
+
+if(cartValue>6){
+    console.log('continue')
+}
+else{
+    console.log('carry on')
+}
+
 
 
 const leftLimitation=document.getElementById('left');
-leftLimitation.innerText=parseInt(leftLimitation.innerText)-1
+leftLimitation.innerText=parseInt(leftLimitation.innerText)-1;
+// --------------------------------------------
+
+
 
     })
 }
@@ -83,6 +91,13 @@ function convertValueInteger(elementId){
     // console.log(convertInteger)
     return convertInteger ; 
 }
+// -------------------------------------------
 
 
-
+// const cartCount =document.getElementById('cart')
+// if(cartCount.innerText<5){
+//     console.log('where are you now')
+// }
+// else{
+//     console.log('you are foolish')
+// }
